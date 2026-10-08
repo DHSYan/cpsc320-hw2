@@ -70,3 +70,6 @@ $
 //
 // 1/x lim_(n -> oo) (log_n (log_b (n))) = \ 
 // $
+
+
+// THOUGHT 5 SQUEEZE
