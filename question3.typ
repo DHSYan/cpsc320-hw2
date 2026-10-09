@@ -122,4 +122,34 @@ $qed$
 // &= (k+1) (k+1)^k\
 // &= (k+1)^(k+1)
 
+== 3c
+
+from part a, we have $ln(n!) in O(n ln(n))$
+
+we now seek to prove $ln(n!) in Omega(n ln(n))$
+
+choose $c = 1/2$ and $n_0 = 1$,
+
+$
+(n!)^2 &>= n^n & "from part b"\ 
+ln(n!^2) &>= ln(n^n) & "since" ln "is a increasing function and " n>=n_0 >= 1\ 
+2 ln(n!) &>=  ln(n!) \
+&>= 1/2 n ln(n)\
+&= c n ln(n)
+$
+
+therefore $ln(n!) in Omega(n ln(n))$
+
+and since we have both $ln(n!) in Omega(n ln(n))$ and $ln(n!) in O(n ln(n))$
+
+we can conclude $ln(n!) in Theta(n ln(n))$
+
+
+
+
+// $
+// c_0 n ln(n) <= ln(n!) <= c_1 n ln(n)
+// $
+
+
 
