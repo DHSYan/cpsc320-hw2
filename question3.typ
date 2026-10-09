@@ -68,23 +68,6 @@ $
 forall n in NN, n^n >= (n+1)^(n-1)
 $
 
-
-// THOUGHT 1 : LOG route
-// $
-// (n+1)^(n+1) >= (n + 1 + 1)^(n+1 -1) \ 
-// (n+1)^(n+1) >= (n + 2)^n  \
-// (n+1)^n (n+1) >= (n+2)^n  \ 
-// (n+1)^n >= ((n+2)^n / (n+1))   \ 
-//
-// log((n + 1)^n) >= log((n+2)^n / (n+1)) \ 
-//
-// log((n + 1)^n) >= log((n+2)^n) - log(n+1) \ 
-//
-// n dot log((n + 1)) >= n dot log(n+2) - log(n+1) \ 
-// $
-//
-
-
 Next, proving $(n!)^2 >= n^n, forall n in NN$
 
 base case, $n=1$ 
@@ -111,14 +94,6 @@ $
 $
 
 $qed$
-
-// &= (k+1) (k^(k+1) + k^k) \
-// // &= (k^(k+2) + 2k^(k+1) + k^k) \ 
-// // &>= (k+1) (k^(k+1)+1) \ 
-// \
-// // &>= (k+1) (k^k +1)\
-// &= (k+1) (k+1)^k\
-// &= (k+1)^(k+1)
 
 == 3c
 
@@ -147,11 +122,6 @@ which is the definition of $ln(n!) in Omega(n ln(n))$
 and since we have both $ln(n!) in Omega(n ln(n))$ and $ln(n!) in O(n ln(n))$
 
 we can conclude $ln(n!) in Theta(n ln(n))$
-
-
-// $
-// c_0 n ln(n) <= ln(n!) <= c_1 n ln(n)
-// $
 
 
 
