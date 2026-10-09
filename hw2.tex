@@ -294,15 +294,110 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
 \begin{itemize}
     \item Case 1: distances are symmetric (distance from $A$ to $B$ is the same as the distance from $B$ to $A$).
     \item Case 2: distances are asymmetric\footnote{Maybe there's a school in the top of a mountain and you have to take some long stairs to get there, but then when you leave you can go down a slide.}. \\
+
+    \color{blue}
+    Let 
+    \texttt{H} be home \\
+    \texttt{A} be school A \\
+    \texttt{B} be school B \\
+    \texttt{W} be work
+    \\
+
+    3 times for symmetric
+
+    6 times for asymmetric
+    \color{black}
 \end{itemize}
     \color{blue}
     \color{black}
 \item (5 pts.) Many algorithms for shortest path (like Dijkstra) actually find the shortest path from one vertex to all the others. Imagine you are a developer for noodle maps and you want to implement a query where the user (a parent) inputs their home and the two schools and it shows them the shortest route starting from their home, passing by the two schools and returning home. Assume that as a developer, when you run noodle maps to find a shortest path from $A$ to $B$, you can actually access the shortest paths from $A$ to every other location. Answer the questions from the previous part under this new hypothesis. \\
     \color{blue}
+
+    
+    2 times for symmetric, because running from (H, A)
+    gives implicitly (H, B), and we just need to run it again
+    from (A,B)
+    
+    3 times for asymmetric.
+    
+    in this case, we need all 6:
+    
+    \begin{verbatim}
+    (H, A)
+    (A, H)
+    (A, B)
+    (B, A)
+    (H, B)
+    (B, H)
+    \end{verbatim}
+    
+    running noodle maps on \texttt{(H, A)} gives
+    also \texttt{(H, B)}
+    
+    again, on \texttt{(A, B)} gives \texttt{(A, H)}
+    
+    again on \texttt{(B, H)} gives \texttt{(B, A)}
+    
+    thus, getting all 6 in 3 runs
     \color{black}
 \item (5 pts.) Answer the questions from the previous two parts, but now under the assumption that work from home is not allowed, so parents must go to their work after dropping both kids.
 \\
     \color{blue}
+    if We are working only under part a with part c,
+
+    5 times if symmetric.
+    
+    \begin{verbatim}
+    (H, A)
+    (H, B)
+    (A, B)
+    (A, W)
+    (B, W)
+    \end{verbatim}
+    
+    if asymmetric, it's 6 times, one per each edge
+    \begin{verbatim}
+    (H, A)
+    (H, B)
+    (A, B)
+    (B, A)
+    (A, W)
+    (B, W)
+    \end{verbatim}
+    
+    now working under part b
+    
+    2 times for symmetric. in this case we need four edges,
+    
+    \begin{verbatim}
+    (H, A)
+    (B, A)
+    (B, W)
+    (A, W)
+    \end{verbatim}
+    
+    run it on \texttt{(B, A)} gives \texttt{(B, W)}
+    
+    run it again on \texttt{(A, W)} gives \texttt{(H, A)} as well.
+    
+    in the asymmetric case, it's 3 times
+    
+    \begin{verbatim}
+    (H, A)
+    (H, B)
+    
+    (A, W)
+    (A, B)
+    
+    (B, W)
+    (B, A)
+    \end{verbatim}
+    
+    run it on \texttt{(A, W)} gives \texttt{(A, B)}
+    
+    run it on \texttt{(B, A)} gives, \texttt{(B, W)}
+    
+    run it on \texttt{(H, A)} gives \texttt{(H, B)}
     \color{black}
 \end{enumerate}
 
@@ -319,6 +414,7 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
         \item Please list the CWLs of all group members. \\
         \color{blue}
         Andrew Li - andrwhli
+        Sean Yan - dhsyan
         
         \color{black}
 		\item List here any books or online sources that you consulted and that led you to the solution of one or more problems (indicate the problem(s) after each resource): \\
@@ -339,8 +435,11 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
         
         \color{black}
 		\item One or more of us used an AI to solve one or more questions from this assignment:\\
-        $\square$ Yes \hspace{.5in} $\square$ No\\
+        $\blacksquare$ Yes \hspace{.5in} $\square$ No\\
 		If yes, please say which problem(s) was(were) solved using AI and which AI model you used:
+        We used Claude Opus 5.5 in some questions. Mainly to only answer 
+        us yes or no questions, to tell us if we are on the right path. 
+        Any other more explicit usage, was statement in line in the question.
         \color{blue}
 
         
@@ -358,3 +457,4 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
  	   
 
 \end{document}
+
