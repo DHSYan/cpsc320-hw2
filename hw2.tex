@@ -251,6 +251,30 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
     \item (5 pts.) Prove that $\ln (n!) \in O(n\ln n)$. \\
     \color{blue}
 
+    
+    \color{black}
+    \item (10 pts.) Using induction, prove that $(n!)^2\geq n^n \ \forall n\in \mathbb{N}$ . \\
+    \emph{Hint:} it may be useful to prove by induction the following property first: $\forall n \in \mathbb{N}, \ n^n \geq (n+1)^{n-1}$.\\
+    \color{blue}
+    
+    \color{black}
+    \item (10 pts.) Use the previous result to conclude that $\ln (n!) \in \Theta(n\ln n)$\\
+    \color{blue}
+
+ 
+
+    
+    \color{black}
+    \item (5 pts.) Either prove or provide a counterexample for the following statement: if $h$ is an increasing function and $h(f(n))\in \Theta(h(g(n)))$, then $f(n)\in \Theta(g(n))$. \\
+    \color{blue}
+    \color{black}
+\end{enumerate}
+\newpage
+
+\noindent {\Large\bfseries 3. Stirling}
+{\color{blue}
+    \begin{enumerate}[a)]
+    \item
     To prove that $\ln(n!) \in O(n \ln(n))$, we choose $c$ and $n_0$ and follow
     the definition of big O. We began with the left hand side $\ln(n!)$
     and slowly expand and perform algebraic manipulations to show that we
@@ -282,13 +306,7 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
      
     \noindent which is the definition of $\ln(n!) \in O(n \ln n)$
 
-
-    
-    \color{black}
-    \item (10 pts.) Using induction, prove that $(n!)^2\geq n^n \ \forall n\in \mathbb{N}$ . \\
-    \emph{Hint:} it may be useful to prove by induction the following property first: $\forall n \in \mathbb{N}, \ n^n \geq (n+1)^{n-1}$.\\
-    \color{blue}
-
+    \item
     \noindent proving the hint first: \\
     $\forall n \in \mathbb{N}, n^n \ge (n+1)^{n-1}$
      
@@ -355,11 +373,7 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
     \]
      
     \hfill $\blacksquare$
-    
-    \color{black}
-    \item (10 pts.) Use the previous result to conclude that $\ln (n!) \in \Theta(n\ln n)$\\
-    \color{blue}
-
+    \item
     \noindent from part a, we have $\ln(n!) \in O(n \ln(n))$
      
     \noindent we now seek to prove $\ln(n!) \in \Omega(n \ln(n))$
@@ -385,12 +399,7 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
      
     \noindent we can conclude $\ln(n!) \in \Theta(n \ln(n))$
  
-
-    
-    \color{black}
-    \item (5 pts.) Either prove or provide a counterexample for the following statement: if $h$ is an increasing function and $h(f(n))\in \Theta(h(g(n)))$, then $f(n)\in \Theta(g(n))$. \\
-    \color{blue}
-
+    \item
     For $h$, we can use $\ln x$ as shown in part a) as a strictly increasing function over its domain. Now, a counterexample would be if you defined $f(n) = n^3$ and $g(n) = n^2$.
     \[h(f(n))\in \Theta(h(g(n)))\]
     \[h(f(n)) \leq c \cdot h(g(n)) ~\text{and} ~h(f(n)) \geq c \cdot h(g(n))\]
@@ -403,42 +412,8 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
     This means that $h(f(n))\in \Theta(h(g(n)))$. But, for $f(n)\in \Theta(g(n))$ on the other hand, the inequalities would look like this:
     \[n^3 \leq c \cdot n^2 ~\text{and} ~n^3 \geq c \cdot n^2\]
     We can see that for the inequalities above only the right side holds (i.e. $f(n)\in \Omega(g(n))$). That means that $f(n)\notin \Theta(g(n))$.
-    
-    \color{black}
-\end{enumerate}
-\newpage
-
-% \noindent {\Large\bfseries 3. Stirling}
-% {\color{blue}
-    % \begin{enumerate}[a)]
-    % \item
-    % To prove that $\ln(n!) \in O(n\ln n)$, we need to show that $\ln(n!) \leq c \cdot n\ln n$ for some constant $c > 0$. First, through the use of logarithm laws we know that $\ln(a^n) = n\ln(a)$. So, we can rewrite $n\ln n$ as $\ln(n^n)$. So, we would then be left with this inequality to prove:
-    % \[\ln(n!) \leq \ln(n^n)\]
-    % Now, for strictly increasing functions, we can use the property of strict monotonicity and exponentiate both sides with base $e$ to get the same inequality but with only the terms within the parentheses (i.e. $n!$ and $n^n$). Now, we can show that $\ln x$ is strictly increasing over its domain by taking the first derivative and checking if it is always positive ($> 0$).
-    % \[\frac{dy}{dx}\ln x = \frac 1x\]
-    % \[\forall x > 0, ~\frac 1x > 0\]
-    % \[\therefore n! \leq n^n \]
-    % Now, the inequality above is much nicer to prove. And for this question we are assuming that $n \geq 0$ since factorials are only defined on non-negative integers. For this proof we are going to expand both terms and compare factors.
-    % \[n \cdot (n-1) \cdot (n-2) \cdot ... \cdot 1 \leq n \cdot n \cdot n \cdot ... \cdot n\]
-    % \[(n - 1) < n, ~(n-2) < n, ~... ,~1 < n\]
-    % Since we established the domain being only non-negative integers, we can safely say that comparing individual factors like that will hold. Therefore $\ln(n!) \leq \ln(n^n) = \ln(n!) \leq c \cdot n\ln n$, meaning $\ln(n!) \in O(n\ln n)$.
-    % \item
-    % \item
-    % \item
-    % For $h$, we can use $\ln x$ as shown in part a) as a strictly increasing function over its domain. Now, a counterexample would be if you defined $f(n) = n^3$ and $g(n) = n^2$.
-    % \[h(f(n))\in \Theta(h(g(n)))\]
-    % \[h(f(n)) \leq c \cdot h(g(n)) ~\text{and} ~h(f(n)) \geq c \cdot h(g(n))\]
-    % \[h(n^3) \leq c \cdot h(n^2) ~\text{and} ~h(n^3) \geq c \cdot h(n^2)\]
-    % \[\ln(n^3) \leq c \cdot \ln(n^2) ~\text{and} ~\ln(n^3) \geq c \cdot \ln(n^2)\]
-    % By the logarithm law shown in part a), the inequalities above can be rewritten as such:
-    % \[3\ln(n) \leq c \cdot 2\ln(n) ~\text{and} ~3\ln(n) \geq c \cdot 2\ln(n)\]
-    % Since with $O$ and $\Omega$ we can disregard constants, we can rewrite it as: 
-    % \[\ln(n) \leq \ln(n) ~\text{and} ~\ln(n) \geq \ln(n)\]
-    % This means that $h(f(n))\in \Theta(h(g(n)))$. But, for $f(n)\in \Theta(g(n))$ on the other hand, the inequalities would look like this:
-    % \[n^3 \leq c \cdot n^2 ~\text{and} ~n^3 \geq c \cdot n^2\]
-    % We can see that for the inequalities above only the right side holds (i.e. $f(n)\in \Omega(g(n))$). That means that $f(n)\notin \Theta(g(n))$.
-    % \end{enumerate}
-% }
+    \end{enumerate}
+}
 
 \newpage
 \section{It's not the destination, it's the journey.}
@@ -614,4 +589,4 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
 
 \end{document}
 
-
+:
