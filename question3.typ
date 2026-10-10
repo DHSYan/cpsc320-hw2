@@ -1,6 +1,24 @@
 = Question 3 
 
 == 3a)
+To prove that $ln(n!) in O(n ln(n))$, we choose $c$ and $n_0$ and follow
+the definition of big O. We began with the left hand side $ln(n!)$ 
+and slowly expand and perform algebraic manipulations to show that we 
+can arrive at to $c dot n ln(n)$ with an inequality in the chain of 
+those algebraic manipulations.
+
+The critical logic to solving this proof, is to realize, that products in 
+the natural log turns into addition. And, each of the terms in $ln(n - i)$
+for some $i in [0, n]$, is smaller or equal to $ln(n)$ because it's a 
+increasing function. which just means a larger input to the natural log
+will yield a larger output. And we choose $n_0 = 1$, because that's where 
+the natural log is positive. With that, we can build up the expression 
+$n ln(n)$.
+
+choose $c = 1$, with no particular reason other than, it let us build up 
+to the definition of Big O
+
+Proof:
 
 Choose $c = 1$,  $n_0 = 1$
 
@@ -9,9 +27,10 @@ $
 ln(n!) & = ln(n dot (n-1)!) \
 & = ln(n) + ln((n - 1)!) \ 
 & = ln(n) + ln(n-1) + ... + ln(1) & "there are" n "terms" \
-& <= ln(n) + ln(n) + ... + ln(n) & "since" ln(n) "is an increasing function"\ 
+& <= ln(n) + ln(n) + ... + ln(n) & "since" ln(n) "is an increasing function and" n >= n_0 = 1 \
 & = n dot ln(n) \ 
-& <= c dot n ln(n) 
+& = 1 dot n dot ln(n)\
+& = c dot n ln(n) 
 $ 
 
 

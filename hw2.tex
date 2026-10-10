@@ -242,6 +242,23 @@ In other words, $\ln(n!)$ is approximately equal to $n\ln n - n$ plus something 
     \item (5 pts.) Prove that $\ln (n!) \in O(n\ln n)$. \\
     \color{blue}
 
+    To prove that $\ln(n!) \in O(n \ln(n))$, we choose $c$ and $n_0$ and follow
+    the definition of big O. We began with the left hand side $\ln(n!)$
+    and slowly expand and perform algebraic manipulations to show that we
+    can arrive at to $c \cdot n \ln(n)$ with an inequality in the chain of
+    those algebraic manipulations.
+    
+    The critical logic to solving this proof, is to realize, that products in
+    the natural log turns into addition. And, each of the terms in $\ln(n - i)$
+    for some $i \in [0, n]$, is smaller or equal to $\ln(n)$ because it's a
+    increasing function. which just means a larger input to the natural log
+    will yield a larger output. And we choose $n_0 = 1$, because that's where
+    the natural log is positive. With that, we can build up the expression
+    $n \ln(n)$.
+    
+    Choose $c = 1$, with no particular reason other than, it let us build up
+    to the definition of Big O
+
     Choose $c = 1$, $n_0 = 1$
     \begin{align*}
     \ln(n!) &= \ln(n \cdot (n-1)!) \\
@@ -542,6 +559,7 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
         \item Please list the CWLs of all group members. \\
         \color{blue}
         Andrew Li - andrwhli
+        
         Sean Yan - dhsyan
         
         \color{black}
@@ -587,4 +605,5 @@ In planet Namek, all the alien kids have now their school for the upcoming schoo
  	   
 
 \end{document}
+
 
