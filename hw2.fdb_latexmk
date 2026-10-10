@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1791483956.98576 "/Users/andrewhli/Documents/CS/Hackathons/StormHacks-26-actual/cpsc320-hw2/hw2.tex" "hw2.pdf" "hw2" 1791483958.98592 0
-  "/Users/andrewhli/Documents/CS/Hackathons/StormHacks-26-actual/cpsc320-hw2/hw2.tex" 1791483897.45767 26073 b0c37bea6bd98e985e8f2985adc20e50 ""
+["pdflatex"] 1791614984.29932 "/Users/abastida/Documents/CPSC/CPSC 320/cpsc320-hw2/hw2.tex" "hw2.pdf" "hw2" 1791614985.24754 0
+  "/Users/abastida/Documents/CPSC/CPSC 320/cpsc320-hw2/hw2.tex" 1791614984.0342 38050 04b24cd3bfa3c9671b833d12dff1ac89 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -131,12 +131,12 @@
   "/usr/local/texlive/2026/texmf-dist/tex/latex/tools/multicol.sty" 1761946296 33142 efe8f4750fc02524935e7423b4bdef69 ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
-  "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1790311118 5573038 b99aad5e4898a9034e953632f940512b ""
+  "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1790059135 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "hw2.aux" 1791483958.82138 1067 068914b6a51dec76808412683a2dfbc6 "pdflatex"
-  "hw2.out" 1791483958.82202 689 58c2a2353fe16bfc1e28648e867d9280 "pdflatex"
-  "hw2.tex" 1791483897.45767 26073 b0c37bea6bd98e985e8f2985adc20e50 ""
+  "hw2.aux" 1791614985.08576 1067 c2bdddd9c83f8da141dab1fe08d3455b "pdflatex"
+  "hw2.out" 1791614985.08643 689 58c2a2353fe16bfc1e28648e867d9280 "pdflatex"
+  "hw2.tex" 1791614984.0342 38050 04b24cd3bfa3c9671b833d12dff1ac89 ""
   (generated)
   "hw2.aux"
   "hw2.log"
